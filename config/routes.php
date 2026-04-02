@@ -22,4 +22,9 @@ $routes['create-user'] = ['Users', 'create'];
  */
 $routes['show-user/:id'] = ['Users', 'show'];
 
+/**
+ * @uses Users::update()
+ */
+$routes['update-user/:id'] = ['Users', 'update'];
+
 return $routes;

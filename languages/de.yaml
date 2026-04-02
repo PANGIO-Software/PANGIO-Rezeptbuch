@@ -30,6 +30,7 @@ users:
     index: 'Benutzer'
     create: 'Benutzer anlegen'
     show: 'Benutzerdetails'
+    update: 'Benutzer bearbeiten'
   attributes:
     username: 'Benutzername'
     password: 'Passwort'

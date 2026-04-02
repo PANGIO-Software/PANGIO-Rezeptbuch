@@ -74,6 +74,44 @@ class Users extends BaseController {
                    ->renderFooter();
     }
 
+    public function update(int $id) :void {
+        $data = [
+            'title' => esc(LANG->users->titles->update),
+            'element' => $this->userModel->select($id)
+        ];
+
+        $requiredFields = [
+            'username'
+        ];
+
+        if ($this->request->is('post') && $this->request->validate($requiredFields)) {
+            $input = [
+                'id' => $id,
+                'username' => esc($this->request->get('username')),
+                'password' => $data['element']['password'],
+                'administrator' => (int)(bool)$this->request->get('administrator'),
+                'deleted' => 0
+            ];
+
+            if (!empty($this->request->get('password'))) {
+                $input['password'] = password_hash($this->request->get('password'), PASSWORD_DEFAULT);
+            }
+
+            if ($this->userModel->update($input)) {
+                setFlashMessage('success', esc(LANG->messages->success->save));
+            }
+            else {
+                setFlashMessage('success', esc(LANG->messages->error->save));
+            }
+
+            redirect('users');
+        }
+
+        $this->view->renderHeader($data)
+                   ->render('users/update', $data)
+                   ->renderFooter();
+    }
+
     private function filterElements(array $elements, string $search): array {
         $search = strtolower($search);
 
