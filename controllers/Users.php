@@ -63,6 +63,17 @@ class Users extends BaseController {
                    ->renderFooter();
     }
 
+    public function show(int $id) :void {
+        $data = [
+            'title' => esc(LANG->users->titles->show),
+            'element' => $this->userModel->select($id)
+        ];
+
+        $this->view->renderHeader($data)
+                   ->render('users/show', $data)
+                   ->renderFooter();
+    }
+
     private function filterElements(array $elements, string $search): array {
         $search = strtolower($search);
 

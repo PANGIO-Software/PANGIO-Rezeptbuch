@@ -16,6 +16,7 @@
         <script src="<?= base_url('assets/js/navigation.js') ?>"></script>
         <script>
             const baseURL = '<?= base_url() ?>';
+            const lang = JSON.parse('<?= array_to_json(LANG) ?>');
         </script>
     </head>
     <body>

@@ -1,6 +1,7 @@
 .btn {
     font: 400 normal 18px 'Quicksand', sans-serif;
     text-decoration: none;
+    display: inline-block;
     color: var(--white);
     padding: 8px;
     border: none;

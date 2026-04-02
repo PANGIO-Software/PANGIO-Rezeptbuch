@@ -9,10 +9,10 @@ use JetBrains\PhpStorm\NoReturn;
 
 if (!function_exists('array_to_json')) {
     /**
-     * @param array $array
+     * @param array|object $array $array
      * @return string
      */
-    function array_to_json(array $array) :string {
+    function array_to_json(array|object $array) :string {
         try {
             return json_encode($array, JSON_THROW_ON_ERROR);
         }

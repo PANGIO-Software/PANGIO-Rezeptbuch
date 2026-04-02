@@ -5,6 +5,9 @@ actions:
   logout: 'Abmelden'
   save: 'Speichern'
   cancel: 'Abbrechen'
+  back: 'Zurück'
+  edit: 'Bearbeiten'
+  delete: 'Löschen'
 general:
   copyright: 'PANGIO Software © 2026'
   yes: 'Ja'
@@ -20,10 +23,13 @@ messages:
   error:
     error: 'Unbekannter Fehler.'
     credentials: 'Unbekannte Benutzerdaten.'
+  confirmations:
+    delete: 'Wollen Sie den Eintrag wirklich löschen?'
 users:
   titles:
     index: 'Benutzer'
     create: 'Benutzer anlegen'
+    show: 'Benutzerdetails'
   attributes:
     username: 'Benutzername'
     password: 'Passwort'
