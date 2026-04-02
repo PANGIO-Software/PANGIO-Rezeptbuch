@@ -112,6 +112,26 @@ class Users extends BaseController {
                    ->renderFooter();
     }
 
+    public function delete(int $id) :void {
+        $element = $this->userModel->select($id);
+        $input = [
+            'id' => $id,
+            'username' => $element['username'],
+            'password' => $element['password'],
+            'administrator' => $element['administrator'],
+            'deleted' => 1
+        ];
+
+        if ($this->userModel->update($input)) {
+            setFlashMessage('success', esc(LANG->messages->success->delete));
+        }
+        else {
+            setFlashMessage('success', esc(LANG->messages->error->delete));
+        }
+
+        redirect('users');
+    }
+
     private function filterElements(array $elements, string $search): array {
         $search = strtolower($search);
 

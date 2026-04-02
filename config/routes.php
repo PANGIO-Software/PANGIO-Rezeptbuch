@@ -27,4 +27,9 @@ $routes['show-user/:id'] = ['Users', 'show'];
  */
 $routes['update-user/:id'] = ['Users', 'update'];
 
+/**
+ * @uses Users::delete()
+ */
+$routes['delete-user/:id'] = ['Users', 'delete'];
+
 return $routes;
