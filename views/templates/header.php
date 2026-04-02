@@ -41,7 +41,7 @@
                     <?= esc(LANG->navigation->categories) ?>
                 </a>
 
-                <a href="javascript:void(0)">
+                <a href="<?= base_url('users') ?>">
                     <?= esc(LANG->navigation->users) ?>
                 </a>
 

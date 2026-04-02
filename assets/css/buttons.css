@@ -9,3 +9,7 @@
 .btn-blue {
     background-color: var(--dark-blue);
 }
+
+.btn-red {
+    background-color: var(--dark-red);
+}

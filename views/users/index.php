@@ -26,7 +26,7 @@
         <i class="fa-solid fa-arrows-rotate"></i>
     </a>
 
-    <a href="javascript:void(0)" class="btn btn-blue">
+    <a href="<?= base_url('create-user') ?>" class="btn btn-blue">
         <i class="fa-solid fa-plus"></i>
     </a>
 </div>

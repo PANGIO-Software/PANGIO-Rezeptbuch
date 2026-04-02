@@ -3,6 +3,8 @@ actions:
   search: 'Suchen'
   login: 'Anmelden'
   logout: 'Abmelden'
+  save: 'Speichern'
+  cancel: 'Abbrechen'
 general:
   copyright: 'PANGIO Software © 2026'
   yes: 'Ja'
@@ -21,6 +23,7 @@ messages:
 users:
   titles:
     index: 'Benutzer'
+    create: 'Benutzer anlegen'
   attributes:
     username: 'Benutzername'
     password: 'Passwort'

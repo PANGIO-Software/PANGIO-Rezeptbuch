@@ -8,5 +8,6 @@
 $routes[] = ['BaseController', 'welcome'];
 
 $routes['users'] = ['Users', 'index'];
+$routes['create-user'] = ['Users', 'create'];
 
 return $routes;

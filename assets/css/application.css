@@ -105,3 +105,29 @@ div.search-wrapper form.search-form div.input-wrapper input {
     padding: 8px;
     border: none;
 }
+
+form.default-form {
+    width: 100%;
+}
+
+form.default-form div.input-wrapper {
+    margin: 0 0 10px 0;
+    width: 100%;
+}
+
+form.default-form div.input-wrapper label {
+    margin: 0 0 5px 0;
+    display: block;
+}
+
+form.default-form div.input-wrapper label span.required {
+    color: var(--dark-red);
+}
+
+form.default-form div.input-wrapper input, form.default-form div.input-wrapper select {
+    font: 400 normal 18px 'Quicksand', sans-serif;
+    outline: none;
+    padding: 8px;
+    border: none;
+    width: 100%;
+}
