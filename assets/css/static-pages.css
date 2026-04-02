@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import 'color-variables.css';
+@import 'buttons.css';
+
+* { box-sizing: border-box; }
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    font: 400 normal 18px 'Quicksand', sans-serif;
+    background-color: var(--dark-gray);
+    color: var(--white);
+}
+
+main {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+div.login-wrapper {
+    background-color: var(--nearly-black);
+    padding: 10px;
+    width: 100%;
+}
+
+div.login-wrapper h1.title {
+    text-align: center;
+    margin: 0 0 25px 0;
+}
+
+form.login-form {
+    width: 100%;
+}
+
+form.login-form div.input-wrapper {
+    margin: 0 0 10px 0;
+    width: 100%;
+}
+
+form.login-form div.input-wrapper label {
+    margin: 0 0 5px 0;
+    display: block;
+}
+
+form.login-form div.input-wrapper label span.required {
+    color: var(--dark-red);
+}
+
+form.login-form div.input-wrapper input {
+    font: 400 normal 18px 'Quicksand', sans-serif;
+    outline: none;
+    padding: 8px;
+    border: none;
+    width: 100%;
+}

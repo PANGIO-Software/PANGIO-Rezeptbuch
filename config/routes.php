@@ -5,7 +5,25 @@
  * @version 1.0.0
  */
 
-$routes[] = ['BaseController', 'welcome'];
+/**
+ * @uses StaticPages::login()
+ */
+$routes[] = ['StaticPages', 'login'];
+
+/**
+ * @uses StaticPages::login()
+ */
+$routes['login'] = ['StaticPages', 'login'];
+
+/**
+ * @uses StaticPages::logout()
+ */
+$routes['logout'] = ['StaticPages', 'logout'];
+
+/**
+ * @uses StaticPages::profile()
+ */
+$routes['profile'] = ['StaticPages', 'profile'];
 
 /**
  * @uses Users::index()

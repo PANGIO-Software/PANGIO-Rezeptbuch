@@ -25,6 +25,9 @@ messages:
     credentials: 'Unbekannte Benutzerdaten.'
   confirmations:
     delete: 'Wollen Sie den Eintrag wirklich löschen?'
+staticPages:
+  titles:
+    login: 'Anmelden'
 users:
   titles:
     index: 'Benutzer'
