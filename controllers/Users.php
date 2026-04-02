@@ -9,6 +9,9 @@ class Users extends BaseController {
     public function __construct() {
         parent::__construct();
 
+        redirectIfNotLoggedIn();
+        redirectIfNotAdministrator();
+
         $this->userModel = new UserModel();
     }
 
