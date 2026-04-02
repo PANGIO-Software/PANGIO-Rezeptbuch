@@ -37,3 +37,9 @@ if (!function_exists('format_timestamp')) {
         return $date->format($format);
     }
 }
+
+if (!function_exists('fileGetContents')) {
+    function fileGetContents(string $path) :string {
+        return file_get_contents($path);
+    }
+}
