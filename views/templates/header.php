@@ -29,7 +29,7 @@
                 <i class="fa-solid fa-user"></i>
             </a>
 
-            <a href="javascript:void(0)" class="logout">
+            <a href="<?= base_url('logout') ?>" class="logout">
                 <i class="fa-solid fa-right-from-bracket"></i>
             </a>
 
