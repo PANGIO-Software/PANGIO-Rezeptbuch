@@ -1,0 +1,27 @@
+projectName: 'Rezeptbuch'
+actions:
+  search: 'Suchen'
+  login: 'Anmelden'
+  logout: 'Abmelden'
+general:
+  copyright: 'PANGIO Software © 2026'
+  yes: 'Ja'
+  no: 'Nein'
+navigation:
+  recipes: 'Rezepte'
+  categories: 'Kategorien'
+  users: 'Benutzer'
+messages:
+  success:
+    save: 'Erfolgreich gespeichert.'
+    delete: 'Erfolgreich gelöscht.'
+  error:
+    error: 'Unbekannter Fehler.'
+    credentials: 'Unbekannte Benutzerdaten.'
+users:
+  titles:
+    index: 'Benutzer'
+  attributes:
+    username: 'Benutzername'
+    password: 'Passwort'
+    administrator: 'Administrator'

@@ -7,4 +7,6 @@
 
 $routes[] = ['BaseController', 'welcome'];
 
+$routes['users'] = ['Users', 'index'];
+
 return $routes;

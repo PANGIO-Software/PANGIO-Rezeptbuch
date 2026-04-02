@@ -25,4 +25,32 @@ class View {
 
         return $this;
     }
+
+    public function renderHeader(array $params = []) :self {
+        $viewDirectory = dirname(__DIR__, 2) . '/views/templates';
+        $viewPath = "$viewDirectory/header.php";
+        extract($params);
+
+        ob_start();
+
+        include $viewPath;
+
+        echo ob_get_clean();
+
+        return $this;
+    }
+
+    public function renderFooter(array $params = []) :self {
+        $viewDirectory = dirname(__DIR__, 2) . '/views/templates';
+        $viewPath = "$viewDirectory/footer.php";
+        extract($params);
+
+        ob_start();
+
+        include $viewPath;
+
+        echo ob_get_clean();
+
+        return $this;
+    }
 }
