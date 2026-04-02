@@ -131,3 +131,30 @@ form.default-form div.input-wrapper input, form.default-form div.input-wrapper s
     border: none;
     width: 100%;
 }
+
+div.content-wrapper {
+    width: 100%;
+}
+
+div.content-wrapper p.element {
+    border-bottom: 1px solid var(--white);
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    padding: 10px;
+    margin: 0;
+    gap: 10px;
+}
+
+div.content-wrapper p.element:last-child {
+    border-bottom: none;
+}
+
+div.content-wrapper p.element span.icon {
+    font-size: 35px;
+}
+
+div.content-wrapper p.element span.arrow {
+    margin-left: auto;
+}

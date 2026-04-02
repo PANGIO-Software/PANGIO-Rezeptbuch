@@ -13,9 +13,17 @@ class Users extends BaseController {
     }
 
     public function index() :void {
+        $search = $this->request->is('post') ? $this->request->get('search') : '';
+        $elements = $this->userModel->select();
+
+        if ($this->request->is('post')) {
+            $elements = $this->filterElements($elements, $search);
+        }
+
         $data = [
             'title' => esc(LANG->users->titles->index),
-            'elements' => $this->userModel->select()
+            'elements' => $elements,
+            'search' => $search
         ];
 
         $this->view->renderHeader($data)
@@ -53,5 +61,15 @@ class Users extends BaseController {
         $this->view->renderHeader($data)
                    ->render('users/create', $data)
                    ->renderFooter();
+    }
+
+    private function filterElements(array $elements, string $search): array {
+        $search = strtolower($search);
+
+        return array_values(array_filter($elements, function($element) use ($search) {
+            if (!isset($element['username'])) return false;
+            $username = strtolower($element['username']);
+            return str_contains($search, $username) || str_contains($username, $search);
+        }));
     }
 }
